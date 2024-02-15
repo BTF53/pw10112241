@@ -5,43 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+        header{
+            background-color: burlywood;     
+        }
+        header nav ul li{
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            display: inline-block;
+        }
+        header nav ul li:hover{
+            background-color: yellow;
+            color: red;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+        }
+    </style>
 </head>
+<!-- etiquetas semanticas para saber como està estructurada la pagina -->
 <body>
+    <!-- encabezado -->
     <header>
-        <img src="logo.jpg" alt="logo">
+        <!-- la imagen puede ir en cualquier parte -->
+        <img src="Logo.png" alt="logo">
+        <!-- solo debe de haber 1 h1 por pagina-->
+        <h1>TITULO DE LA PAGINA DE PW </h1>
 
-        <h1>Titulo de Pagina</h1>
+        <!-- menu de navegacion -->
         <nav>
             <ul>
-                <li>Opciones</li>
-                <li>Opciones</li>
+                <li>INICIO</li>
+                <li>ARCHIVO</li>
+                <li>GUARDAR</li>
+                <li>NOSOTROS</li>
+                <li>SALIR PARA AFUERA</li>
             </ul>
         </nav>
     </header>
+    <!-- es el resumen de la pagina, parte importante -->
     <main>
-        Aqui va lo importante
-        <article>Fuera de seccion</article>
+        aqui va lo importante
+        <!-- dividir por secciones -->
+        <article> fuera de seccion</article>
         <section></section>
         <section>
+            <!-- puede tener lo que sea o divir por articulos -->
             <article></article>
             <article>
-                Informacion
+                informacion
                 <article> </article>
             </article>
-            
         </section>
-        <aside>
+        <!-- etiquetas que no son importante, puede ir donde sea-->
+        <aside> 
             Info no importante
-            Informacion tangencial de la empresa
+            informacion tangencial de la empresa
         </aside>
     </main>
+    <!-- pie de pagina -->
     <footer>
-        Contacto - Telefono - direcciones
-        &copy; 2024 <br>
-        acerca de...
+          contacto- telefono- direccion
+          &copy; 2024 <br>
+          Acerca de....
+          Otras paginas....
     </footer>
-
-
-
+    Productividad <br>
+    Emmet <br>
+    <ul>
+        <li> Elementos</li>
+        <li> Elementos</li>
+        <li> Elementos</li>
+        <li> Elementos</li>
+    </ul>
+    <!-- ul>li*4 -->
+    <ul>
+        <!-- mantener en alt en varios renglones -->
+        <li>Multiedicion</li>
+    </ul>
+    <!-- main>section>article*2 -->
+   
+    <main>
+        <section>
+            <article></article>
+            <article></article>
+        </section>
+    </main>
+    <section class="noticias"></section>
+    <section id = "inicio"></section>
+    <!-- extension auto rename tag,htmm css support, live server,material icon theme -->
 </body>
 </html>
