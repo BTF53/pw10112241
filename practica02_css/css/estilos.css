@@ -67,6 +67,70 @@ header nav ul li
     color: #FF0099;
     content: "• ";
 }
+#secc03art04{
+    padding-top: 45px;
+}
+#secc03art04 input[type="button"]
+{
+    color: white;
+    background: greenyellow;  
+}
+
+#secc04art01{
+    margin-left: -20px;
+    width: 43%;
+}
+#secc04art02{
+    width: 40%;
+    padding-top: 4%;
+    text-align: center;
+}
+#secc04art03{
+    margin-top: -80px;
+    width: 10%;
+}
+#secc04art04{
+    width: 5%;
+    margin-top: -120px;
+}
+#secc04art04 input[type="Valid"]{
+    background: #4267B3;
+    border-radius: 5px;
+    color: white;
+    margin-top: 120px;
+    margin-left: -35px;
+    text-align: center;
+    width: 80px;
+}
+
+#segundaseccion article{
+    padding-right: 140px;
+    text-align: right;
+}
+#terceraseccion article img{
+    /*
+        ALINEACION VERTICAL DEL TEXTO 
+        QUE LA RODEA
+    */
+    vertical-align: middle;
+}
+#terceraseccion article{
+    display: inline-block;
+    vertical-align: top;
+    width: 23%;
+}
+
+#cuartaseccion article{
+    display: inline-block;
+    vertical-align: top;
+}
+#footer{
+    color: white;
+    background-color: #4267B3;
+    padding-top: 5%;
+    padding-left: 5%;
+    margin-top: 50px;
+}
 .colorazul
 {
     color: #4267B3;
@@ -79,9 +143,17 @@ header nav ul li
 {
     color: #8BC500;
 }
+.colorblanco
+{
+    color: white;
+}
 .letragrande
 {
     font-size: 3.5em;
+}
+.letramediana
+{
+    font-size: 2em;
 }
 .nito
 {
