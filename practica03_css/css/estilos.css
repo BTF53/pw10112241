@@ -1,4 +1,4 @@
-/* Practica03 - Inicio css*/ 
+/* Practica03 - Seccion Terminada*/ 
 
 html
 {
@@ -7,6 +7,10 @@ html
     --color-negro: #353535;
     --color-rojo: #D33040;
     --color-gris: lightgray;
+    --fondo-negro: #2C2C2C;
+    --color-linea: #949494;
+    --color-azul: lightblue;
+    --color-blanco: white;
 }
 body
 { 
@@ -17,6 +21,9 @@ body
 header ul li
 {
     display: inline-block;
+    padding: 8px 14px;
+    text-align: center;
+    margin-left: -10px;
     width: 17%;
 }
 header ul li:nth-child(2)
@@ -34,4 +41,47 @@ header ul li:nth-child(4)
 header ul li:nth-child(5)
 {
     background: var(--color-gris);
+}
+section article{
+    display: inline-block;
+    width: 17.9%;
+    height: 280px;
+    padding: 18px 8px;
+    vertical-align: top;
+}
+section article ul{
+    list-style: none;
+}
+section article:nth-child(2){
+    background: var(--color-verde);
+}
+section article:nth-child(3){
+    background: var(--color-negro);
+}
+section article:nth-child(4){
+    background: var(--color-rojo);
+}
+section article:nth-child(5){
+    background: var(--color-gris);
+}
+section, footer{
+    background: var(--fondo-negro);
+}
+section img{
+    width: 150px;
+}
+.letra-azul{
+    color: var(--color-azul);
+}
+.letra-blanca{
+    color: var(--color-blanco);
+}
+.letra-gris{
+    color: var(--color-linea);
+}
+.tam-menu-lateral{
+    font-size: 1.1em;
+}
+.tam-tarjetas{
+    font-size: 1.7em;
 }
