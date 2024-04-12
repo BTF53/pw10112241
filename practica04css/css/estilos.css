@@ -1,0 +1,133 @@
+
+html
+{
+    /* PROPIEDADES PERSONALIZADAS */
+    --color-verde: #8BC500; 
+    --color-negro: #353535;
+    --color-rojo: #D33040;
+    --color-gris: lightgray;
+    --fondo-negro: #2C2C2C;
+    --color-linea: #949494;
+    --color-azul: lightblue;
+    --color-blanco: white;
+}
+body
+{
+    font-size: 16px;
+    margin: 0px auto;
+    max-width: 1078px;
+    min-width: 1078px;
+}
+header nav{
+    margin-left: -40px;
+}
+header nav ul li
+{
+    display: inline-block;
+    font-size: 1.4em; 
+    margin-right: 15px;
+    padding-bottom: 2px;
+}
+section article
+{
+    display: inline-block;
+    vertical-align: top;
+}
+header hr
+{
+    border-style: dashed;
+}
+#gotoshop
+{
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -55px;
+    width: 5%;
+}
+#buyimg
+{
+    position: relative;
+    margin-left: -40%;
+    padding: 10px;
+    width: 27%;
+    margin-top: -10px;
+}
+#logofooter
+{
+    position: absolute;
+    margin-top: -15px;
+}
+#secc01art01 hr
+{
+    border-style: dashed;
+}
+#headerart01
+{
+    margin-top: 10px;
+    margin-left: 950px;
+    width: 30%;
+}
+#headerart02 img
+{
+    margin: 20px 0px;
+}
+#headerart03
+{
+    margin-left: 800px;
+    margin-top: -100px;
+}
+#seccion02 article{
+    display: inline-block;
+    width: 17%;
+    padding: 1%;
+}
+#secc01art01
+{
+    width: 55%;
+}
+#secc01art02
+{
+    margin-left: 600px;
+    margin-top: -290px;
+    width: 45%;
+}
+#secc01art02 img
+{
+    margin-top: -10px;
+    margin-left: 30px;
+}
+#sec01art03 img
+{
+    position: absolute;
+    margin-top: -250px;
+    width: 290px;
+}
+#video02img
+{
+    margin-left: 310px;
+}
+#sec01art04 img
+{
+    position: absolute;
+    width: 140px;
+    margin-top: -120px;
+    margin-left: 620px;
+}
+.letra_grande{
+    font-size: 4.6em;
+}
+.letra_verde{
+    color: var(--color-verde);
+}
+.letra_gris{
+    color: var(--color-linea);
+}
+.nito
+{
+    font-weight: bold;
+}
+.centrado
+{
+    position: absolute;
+    margin-left: 150px;
+}
