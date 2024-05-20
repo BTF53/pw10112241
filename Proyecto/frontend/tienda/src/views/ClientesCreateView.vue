@@ -8,51 +8,79 @@
                 </div>
             </div>    
             <div class="card-body">
+                <Form :validation-schema="validationSchema" @submit="onTodoBien">
                 <div class="mb-3">
                     Id
-                    <input type="text" class="form-control" v-model="model.cliente.id">
+                    <Field name="id" id="id" type="text" class="form-control" v-model="model.cliente.id"/>
+                    <ErrorMessage name="id" />
                 </div>
                 <div class="mb-3">
                     Nombre
-                    <input type="text" class="form-control" v-model="model.cliente.nombre">
+                    <Field name="nombre" id="nombre" type="text" class="form-control" v-model="model.cliente.nombre"/>
+                    <ErrorMessage name="nombre" />
                 </div>
                 <div class="mb-3">
                     Apellido
-                    <input type="text" class="form-control" v-model="model.cliente.apellido">
+                    <Field name="apellido" id="apellido" type="text" class="form-control" v-model="model.cliente.apellido"/>
+                    <ErrorMessage name="apellido" />
                 </div>
                 <div class="mb-3">
                     Direccion
-                    <input type="text" class="form-control" v-model="model.cliente.direccion">
+                    <Field name="direccion" id="direccion" type="text" class="form-control" v-model="model.cliente.direccion"/>
+                    <ErrorMessage name="direccion" />
                 </div>
                 <div class="mb-3">
                     Telefono
-                    <input type="text" class="form-control" v-model="model.cliente.telefono">
+                    <Field name="telefono" id="telefono" type="text" class="form-control" v-model="model.cliente.telefono"/>
+                    <ErrorMessage name="telefono" />
                 </div>
                 <div class="mb-3">
                     RFC
-                    <input type="text" class="form-control" v-model="model.cliente.rfc">
+                    <Field name="rfc" id="rfc" type="text" class="form-control" v-model="model.cliente.rfc"/>
+                    <ErrorMessage name="rfc" />
                 </div>
                 <div class="mb-3">
                     CURP
-                    <input type="text" class="form-control" v-model="model.cliente.curp">
+                    <Field name="curp" id="curp" type="text" class="form-control" v-model="model.cliente.curp"/>
+                    <ErrorMessage name="curp" />
                 </div>
                 <div class="mb-3">
                     CP
-                    <input type="text" class="form-control" v-model="model.cliente.cp">
+                    <Field name="cp" id="cp" type="text" class="form-control" v-model="model.cliente.cp"/>
+                    <ErrorMessage name="cp" />
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-primary" @click="guardarCliente()"> Guardar </button>
+                    <button type="submit" class="btn btn-primary"> Guardar </button>
                 </div>
+            </Form>
             </div>
         </div>
     </div>
 </template>
 <script>
 import axios from 'axios';
+import {Field, Form, ErrorMessage} from 'vee-validate';
+import { toTypedSchema } from '@vee-validate/zod';
+import * as zod from 'zod';
+import { Alert } from 'bootstrap';
 export default {
     name: "ClientesCreate",
+    components: { Field, Form, ErrorMessage},
     data(){
+        const validationSchema = toTypedSchema(
+            zod.object({
+                id: zod.string({message: 'Requerido'}).min(1),
+                nombre: zod.string({message: 'Requerido'}).min(1),
+                apellido: zod.string({message: 'Requerido'}).min(1),
+                direccion: zod.string({message: 'Requerido'}).min(1),
+                telefono: zod.string({message: 'Requerido'}).min(1).max(10),
+                rfc: zod.string({message: 'Requerido'}).min(1),
+                curp: zod.string({message: 'Requerido'}).min(1),
+                cp: zod.string({message: 'Requerido'}).min(1),
+            })
+        )
         return{
+            validationSchema,
             mensaje: 0,
             model:{
                 cliente:{
@@ -69,6 +97,9 @@ export default {
         }
     },
     methods:{
+        onTodoBien(){
+            alert('Todo Validado');
+        },
         guardarCliente(){
             axios.post('http://localhost:3000/api/clientes',this.model.cliente).then
             (res=> {
