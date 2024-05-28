@@ -12,11 +12,12 @@
     "Clientes",
     "Ejemplo"
   ],
-  "author": "PROGRAMACION WEB - Oscar Felix",
+  "author": "PROGRAMACION WEB - Keyn Acosta",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "node.js": "^0.0.1-security"
   }
 }

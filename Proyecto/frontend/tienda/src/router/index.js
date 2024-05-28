@@ -3,13 +3,15 @@ import HomeView from '../views/HomeView.vue'
 import ClientesView from '../views/ClientesView.vue'
 import ClientesCreateView from '../views/ClientesCreateView.vue'
 import ClientesEditarView from '../views/ClientesEditarView.vue'
+import RegistroView from '../views/RegistroView.vue'
+import EntradaView from '../views/EntradaView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-    path: '/',
-    name: 'home',
+      path: '/',
+      name: 'home',
       component: HomeView
     },
     {
@@ -26,6 +28,16 @@ const router = createRouter({
       path: '/clientes/:id/edit',
       name: 'clienteseditar',
       component: ClientesEditarView
+    },
+    {
+      path: '/clientes/registro',
+      name: 'registro',
+      component: RegistroView
+    },
+    {
+      path: '/clientes/entrada',
+      name: 'entrada',
+      component: EntradaView
     },
     {
       path: '/about',
